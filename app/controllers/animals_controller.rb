@@ -1,4 +1,5 @@
 class AnimalsController < ApplicationController
+  include ApplicationHelper
   
   before_action :current_animal, only: [ :show, :edit, :update, :destroy ]
   before_action :current_adoption, only: [ :show ]
@@ -17,6 +18,9 @@ class AnimalsController < ApplicationController
   def new
     @animal = Animal.new
     @adoption = Adoption.new
+
+    @animal.date_of_birth = data_br(Date.today)
+    @animal.adopted = false
   end
 
   def create
