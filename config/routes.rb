@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  #get 'adoptions/index'
+  #get 'adoptions/show'
+  #get 'adoptions/new'
+  #get 'adoptions/create'
+  #get 'adoptions/edit'
+  #get 'adoptions/update'
+  #get 'adoptions/destroy'
+  resources :adoptions
   #get 'animals/index'
   #get 'animals/show'
   #get 'animals/new'
