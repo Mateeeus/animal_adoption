@@ -1,0 +1,15 @@
+class CreateAnimals < ActiveRecord::Migration[6.0]
+  def change
+    create_table :animals do |t|
+      t.string :name
+      t.date :date_of_birth
+      t.string :animal_type
+      t.boolean :adopted
+      t.string :short_description
+      t.string :full_description
+      t.string :image_url
+
+      t.timestamps
+    end
+  end
+end
