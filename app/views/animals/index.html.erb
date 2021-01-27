@@ -1,10 +1,11 @@
 
-<div class="p-2 inline-block grid grid-cols-11 grid-span-4">
-  <div class="col-span-5 text-right font-bold text-white"> Animais adotados: <%= link_to 'Sim', animals_path(filter_adopted: true), :class => 'bg-red-500 rounded py-1 px-4' %> </div>
-  <div class="col-span-1 text-center font-bold"> <%= link_to 'Não', animals_path(filter_adopted: false), :class => 'text-white bg-green-500 rounded py-1 px-4' %> </div>
-  <div class="col-span-5 text-left font-bold"> <%= link_to 'Todos', animals_path, :class => 'text-white bg-blue-600 rounded py-1 px-4' %> </div>
+<div class="p-2 inline-block grid grid-cols-12 grid-span-4 text-white ml-20">
+  <div class="col-span-5 text-right font-bold"> Animais adotados: <%= link_to 'Sim', animals_path(filter_adopted: true), :class => 'bg-red-500 hover:bg-red-800 rounded py-1 px-4' %> </div>
+  <div class="col-span-1 text-center font-bold"> <%= link_to 'Não', animals_path(filter_adopted: false), :class => 'bg-green-500 hover:bg-green-800 rounded py-1 px-4' %> </div>
+  <div class="col-span-5 text-left font-bold"> <%= link_to 'Todos', animals_path, :class => 'bg-blue-500 hover:bg-blue-800 rounded py-1 px-4' %> </div>
+  <div class="col-span-1 left font-bold"> <%= link_to 'Cadastrar animal', new_animal_path, :class => 'bg-blue-500 hover:bg-blue-800 font-bold py-1 px-3 rounded' %> </div>
 </div>
-
+<hr>
 <div class="divide-y text-blue-300">
   <% @animals.each do |animal| %>
     <div class="block p-2">
@@ -16,5 +17,3 @@
   <% end %>
 
 </div>
-<hr>
-<div class="font-bold text-center mt-6"> <%= link_to 'Cadastrar um novo animal', new_animal_path, :class => 'bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded' %> </div>
