@@ -25,7 +25,7 @@ class AnimalsController < ApplicationController
   def create
     animal = Animal.create(animal_params)
     adoption = Adoption.create(animal_id: animal.id)
-
+    adoption.owner_name = "Nenhum"
     redirect_to animal_path(animal)
   end
 

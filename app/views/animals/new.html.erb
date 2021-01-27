@@ -5,11 +5,11 @@
       <div class="font-bold"> Nome do animal </div>
       <div class="block"> <%= form.text_field :name, placeholder: "Nome do animal", size: '67', class: 'text-center' %> </div>
       <div class="mt-1 font-bold"> Tipo do animal </div>
-      <div class="block"> <%= form.text_field :animal_type, placeholder: "Gato/Cachorro/Outro", size: '67', class: 'text-center' %> </div>
+      <div class="block"> <%= form.text_field :type_animal, placeholder: "Gato/Cachorro/Outro", size: '67', class: 'text-center' %> </div>
       <div class="mt-1 font-bold"> Dia de nascimento</div>
       <div class="block"> <%= form.text_field :date_of_birth , placeholder: "16/10/1999", size: '67', class: 'text-center' %> </div>
       <div class="mt-1 font-bold"> Adotado </div>
-      <div class="block"> <%= form.text_field :adopted , placeholder: "Sim/Não", size: '67', class: 'text-center disabled', value: 'Não', disabled: false %> </div>
+      <div class="block"> <%= form.text_field :adopted , placeholder: "Sim/Não", size: '67', class: 'text-center disabled', value: false, disabled: true %> </div>
       <div class="mt-1 font-bold"> Pequena descrição do animal </div>
       <div class="block mt-1"> <%= form.text_area :short_description , placeholder: "Descrição curta referente ao animal", rows: '3', cols: '69', class: 'text-center' %> </div>
       <div class="mt-1 font-bold"> Descrição completa do animal </div>
