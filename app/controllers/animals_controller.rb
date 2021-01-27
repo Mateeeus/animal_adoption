@@ -20,7 +20,6 @@ class AnimalsController < ApplicationController
     @adoption = Adoption.new
 
     @animal.date_of_birth = data_br(Date.today)
-    @animal.adopted = false
   end
 
   def create
