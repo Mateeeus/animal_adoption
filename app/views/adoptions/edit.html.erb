@@ -1,2 +1,13 @@
-<h1>Adoptions#edit</h1>
-<p>Find me in app/views/adoptions/edit.html.erb</p>
+<div class="block p-2 text-center font-bold text-xl text-white">
+  <div class=""> Adoção de animal </div>
+  <div class="mt-3"> <%= @animal.name %> </div>
+  <div class="mt-1 flex md:justify-center"> <%= image_tag @animal.image_url, size: "450x450" %> </div>
+  <%= form_with model: @adoption do |form| %>
+    <div class="mt-3"> Nome do Dono: </div>
+    <div class="mt-3"> <%= form.text_field :owner_name, placeholder: "Nome do novo dono", class: 'text-center text-black', size: '46' %> </div>
+    <div class="mt-3"> Data de adoção: </div>
+    <div class="mt-3"> <%= form.text_field :date_of_adoption, placeholder: "16/10/1999", class: 'text-center text-black', value: data_br(Date.today), size: '46' %> </div>
+    <div ><%= form.submit "Salvar", class: 'mt-5 rounded py-1 px-4 bg-green-500 hover:bg-green-700 font-bold' %> </div>
+  <% end %>
+
+</div>

@@ -19,6 +19,7 @@ class AdoptionsController < ApplicationController
 
   def update
     @adoption.update(adoption_params)
+    @animal.update(adopted: true)
 
     redirect_to animals_path
   end
