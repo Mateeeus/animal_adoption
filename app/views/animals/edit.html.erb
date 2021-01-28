@@ -1,10 +1,16 @@
 <div class="p-2 block">
-  <div class="text-white text-lg"> Edição de dados do animal </div>
-  <div class="">
-    <%= form_with model: @animal do |form| %>
-      <div class="mt-2"> <%= form.text_field :name %> </div>
-      <div class="mt-2"> <%= form.text_field :image_url  %> </div>
-      <div class="mt-2"> <%= form.submit "Salvar", class: 'rounded px-3 bg-green-500 hover:bg-green-800' %> </div>
-    <% end %>
-  </div>
+  <div class="text-white text-xl text-center font-bold"> Edição de dados do animal </div>
+  <%= form_with model: @animal do |form| %>
+    <div class="font-bold text-white text-center mt-3"> Nome do animal </div>
+    <div class="mt-1 text-center"> <%= form.text_field :name, size: '67', class: 'text-center text-black' %> </div>
+    <div class="font-bold text-white text-center mt-3"> Tipo do animal </div>
+    <div class="mt-1 text-center"> <%= form.text_field :type_animal, size: '67', class: 'text-center text-black' %> </div>
+    <div class="font-bold text-white text-center mt-3"> Descrição curta referente ao animal </div>
+    <div class="mt-1 text-center"> <%= form.text_area :short_description, rows: '3', cols: '69', class: 'text-center text-black' %> </div>
+    <div class="font-bold text-white text-center mt-3"> Descrição completa referente ao animal </div>
+    <div class="mt-1 text-center"> <%= form.text_area :full_description, rows: '6', cols: '69', class: 'text-center text-black' %> </div>
+    <div class="font-bold text-white text-center mt-3"> URL da imagem do animal </div>
+    <div class="mt-1 text-center"> <%= form.text_field :image_url, size: '200', class: 'text-center text-black' %> </div>
+    <div class="mt-5 text-center text-lg"> <%= form.submit "Salvar", class: 'rounded py-1 px-3 bg-green-500 hover:bg-green-800 text-white font-bold' %> </div>
+  <% end %>
 </div>
