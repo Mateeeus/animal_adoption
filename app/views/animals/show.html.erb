@@ -1,22 +1,21 @@
 <div class="block p-2 text-white">
-
-  <div class="text-center  text-xl mt-1"> <%= @animal.name %> </div>
-  <div class="mt-1 flex md:justify-center"> <%= image_tag @animal.image_url, size: "400x400" %> </div>
-  <div class="text-center text-xl mt-1"> Tipo do animal: <%= @animal.type_animal %> </div>
-  <div class="text-center text-xl mt-1"> Data de Nascimento: <%= data_br(@animal.date_of_birth) %> </div>
-  <div class="text-center text-xl mt-1"> Adotado: <%= booleanSimNao(@animal.adopted) %> </div>
-  <div class="text-center text-xl mt-1"> Descrição curta: <%= @animal.short_description %> </div>
-  <div class="text-center text-xl mt-1"> Descrição completa: <%= @animal.full_description %> </div>
-  <div class="text-center text-xl mt-1"> Dono: <%= nome_dono(@adoption.owner_name) %> </div>
+  <div class="text-center  text-xl mt-4 font-bold"> <%= @animal.name %> </div>
+  <div class="mt-4 flex md:justify-center"> <%= image_tag @animal.image_url, size: "500x500" %> </div>
+  <div class="text-center text-xl mt-4"> <strong> Tipo do animal: </strong> <%= @animal.type_animal %> </div>
+  <div class="text-center text-xl mt-4"> <strong> Data de Nascimento: </strong> <%= data_br(@animal.date_of_birth) %> </div>
+  <div class="text-center text-xl mt-4"> <strong> Descrição curta: </strong> <%= @animal.short_description %> </div>
+  <div class="text-center text-xl mt-4"> <strong> Descrição completa: </strong> <%= @animal.full_description %> </div>
+  <div class="text-center text-xl mt-4"> <strong> Adotado: </strong> <%= booleanSimNao(@animal.adopted) %> </div>
+  <div class="text-center text-xl mt-4"> <strong> Dono: </strong> <%= nome_dono(@adoption.owner_name) %> </div>
 
 </div>
 
-<div class="block mt-2 text-blue-300">
-  <div class="text-center hover:underline text-xl font-bold"> <%= link_to 'Adotar', edit_adoption_path(@adoption.id), method: 'get' %> </div>
+<div class="block mt-2 ">
+  <div class="text-center text-white mt-5"> <%= link_to 'Adotar', edit_adoption_path(@adoption.id), method: 'get', class: 'text-xl font-bold bg-green-600 hover:bg-green-800 rounded py-1 px-3' %> </div>
 </div>
 
-<div class="inline-block grid grid-cols-11 mt-2 text-blue-300 font-bold">
-  <div class="col-span-5 text-right hover:underline text-xl"> <%= link_to 'Voltar', animals_path %> </div>
-  <div class="col-span-1 text-center hover:underline text-xl"> <%= link_to 'Editar', edit_animal_path(@animal), method: 'get' %> </div>
-  <div class="col-span-5 text-left hover:underline text-xl"> <%= link_to 'Deletar', animal_path(@animal), method: 'delete', data: { confirm: 'Tem certeza?'} %> </div>
+<div class="inline-block grid grid-cols-11 mt-7 text-white font-bold">
+  <div class="col-span-5 text-right text-xl"> <%= link_to 'Voltar', animals_path, class: 'bg-blue-500 hover:bg-blue-800 rounded py-1 px-3' %> </div>
+  <div class="col-span-1 text-center text-xl"> <%= link_to 'Editar', edit_animal_path(@animal), method: 'get', class: 'bg-blue-500 hover:bg-blue-800 rounded py-1 px-3' %> </div>
+  <div class="col-span-5 text-left text-xl"> <%= link_to 'Deletar', animal_path(@animal), method: 'delete', data: { confirm: 'Tem certeza?'}, class: 'bg-red-500 hover:bg-red-800 rounded py-1 px-3' %> </div>
 </div>
