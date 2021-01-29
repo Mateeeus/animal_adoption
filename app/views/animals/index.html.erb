@@ -10,6 +10,7 @@
   <% @animals.each do |animal| %>
     <div class="block p-2">
       <div class="text-center text-lg mt-1"> <strong> Nome: </strong> <%= animal.name %> </div>
+      <div class="text-center text-lg mt-1"> <strong> Tipo do animal: </strong> <%= animal.type_animal %> </div>
       <div class="text-center text-lg mt-1"> <strong> Adotado: </strong> <%= booleanSimNao(animal.adopted) %> </div>
       <div class="text-center text-lg mt-1"> <strong> Descrição curta: </strong> <%= animal.short_description %> </div>
       <div class="text-center text-lg mt-3"> <%= link_to 'Visualizar mais Informações', animal_path(animal), class: 'font-bold bg-blue-500 rounded hover:bg-blue-800 px-3 py-1' %> </div>
