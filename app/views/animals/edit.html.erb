@@ -9,8 +9,7 @@
     <div class="mt-1 text-center"> <%= form.text_area :short_description, rows: '3', cols: '69', class: 'text-center text-black' %> </div>
     <div class="font-bold text-white text-center mt-3"> Descrição completa referente ao animal </div>
     <div class="mt-1 text-center"> <%= form.text_area :full_description, rows: '6', cols: '69', class: 'text-center text-black' %> </div>
-    <div class="font-bold text-white text-center mt-3"> URL da imagem do animal </div>
-    <div class="mt-1 text-center"> <%= form.text_field :image_url, size: '200', class: 'text-center text-black' %> </div>
+    <%= form.file_field :animalimage %>
     <div class="mt-5 text-center text-lg"> <%= form.submit "Salvar", class: 'rounded py-1 px-3 bg-green-500 hover:bg-green-800 text-white font-bold' %> </div>
   <% end %>
 </div>

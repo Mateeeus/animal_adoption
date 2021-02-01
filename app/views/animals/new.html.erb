@@ -14,8 +14,7 @@
       <div class="block mt-2"> <%= form.text_area :short_description , placeholder: "Descrição curta referente ao animal", rows: '3', cols: '69', class: 'text-center text-black' %> </div>
       <div class="mt-3 font-bold"> Descrição completa do animal </div>
       <div class="block mt-2"> <%= form.text_area :full_description , placeholder: "Descrição completa referente ao animal", rows: '6', cols: '69', class: 'text-center text-black' %> </div>
-      <div class="mt-3 font-bold"> URL da imagem do animal </div>
-      <div class="block mt-2 mb-6"> <%= form.text_field :image_url , placeholder: "URL da Imagem do animal", size: '200', class: 'text-center text-black' %> </div>
+      <%= form.file_field :animalimage %>
       <div class="block mt-1"> <%= form.submit "Criar Animal", :class => 'bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded' %>
     <% end %>
   </div>

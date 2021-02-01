@@ -7,7 +7,6 @@ class CreateAnimals < ActiveRecord::Migration[6.0]
       t.boolean :adopted
       t.string :short_description
       t.string :full_description
-      t.string :image_url
 
       t.timestamps
     end
